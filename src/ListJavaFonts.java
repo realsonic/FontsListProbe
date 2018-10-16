@@ -12,8 +12,9 @@ public class ListJavaFonts {
 
         JPanel panel = new JPanel();
         panel.setLayout(new BorderLayout());
-        JLabel testLabel = new JLabel("<html><b>Bold</b> or <i>italic</i> <font color='red'>red</font> text sample<br/><br/>" +
-                "Пример <b>жирного</b> или <i>курсивного</i> <font color='red'>красного</font> текста</html>", SwingConstants.CENTER);
+        String sampleHtmlStr = "<html><b>Bold</b> or <i>italic</i> <span style=\"color: red; \">red</span> text sample<br/><br/>" +
+                "Пример <b>жирного</b> или <i>курсивного</i> <span style=\"color: red; \">красного</span> текста</html>";
+        JLabel testLabel = new JLabel(sampleHtmlStr, SwingConstants.CENTER);
         testLabel.setPreferredSize(new Dimension(600, 300));
         JList<String> fontsList = new JList<>(fonts);
         fontsList.addListSelectionListener(e -> {
